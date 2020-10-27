@@ -52,4 +52,9 @@ public class BankAccount {
             return true;
         }
     }
+
+    // toString method
+    public String toString() {
+        return "ACCOUNT: " + accountID + " BALANCE: " + balance;
+    }
 }
