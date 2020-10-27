@@ -17,13 +17,15 @@ public class BankTester {
         // System.out.println(account1.getBalance());
         
         System.out.println(account1.deposit(100));
-        System.out.println(account1.withdraw(-10));
-        System.out.println(account1.getBalance());
-        System.out.println(account1.withdraw(10.50));
-        System.out.println(account1.getBalance());
-        System.out.println(account1.withdraw(23424));
-        System.out.println(account1.getBalance());
-        System.out.println(account1.withdraw(23.234124312));
-        System.out.println(account1.getBalance());
+        // System.out.println(account1.withdraw(-10));
+        // System.out.println(account1.getBalance());
+        // System.out.println(account1.withdraw(10.50));
+        // System.out.println(account1.getBalance());
+        // System.out.println(account1.withdraw(23424));
+        // System.out.println(account1.getBalance());
+        // System.out.println(account1.withdraw(23.234124312));
+        // System.out.println(account1.getBalance());
+
+        System.out.println(account1.toString());
     }
 }
