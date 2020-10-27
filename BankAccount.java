@@ -40,4 +40,16 @@ public class BankAccount {
             return true;
         }
     }
+
+    public boolean withdraw(double amount) {
+        if (amount < 0 || balance - amount < 0) {
+            return false;
+        } else {
+            if (amount*1000 % 10 != 0) { // checks if the value is to the nearest cent
+                return false;
+            }
+            balance -= amount;
+            return true;
+        }
+    }
 }
