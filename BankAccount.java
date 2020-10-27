@@ -18,4 +18,12 @@ public class BankAccount {
     public int getAccount() {
         return accountID;
     }
+
+    public void setPassword(String newPass) {
+        password = newPass;
+    }
+
+    public String forgotPassword() {    // for testing setPassword()
+        return password;
+    }
 }
