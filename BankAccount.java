@@ -15,7 +15,7 @@ public class BankAccount {
         return balance;
     }
 
-    public int getAccount() {
+    public int getAccountID() {
         return accountID;
     }
 
@@ -24,9 +24,9 @@ public class BankAccount {
         password = newPass;
     }
 
-    public String forgotPassword() {    // for testing setPassword()
-        return password;
-    }
+    // public String forgotPassword() {    // for testing setPassword()
+    //     return password;
+    // }
 
     // withdraw and deposit methods
     public boolean deposit(double amount) {
@@ -53,8 +53,20 @@ public class BankAccount {
         }
     }
 
-    // toString method
+    // toString method  // automatically called when a string is needed
     public String toString() {
-        return "ACCOUNT: " + accountID + "\tBALANCE: " + balance;
+        return "ACCOUNT: #" + accountID + "\tBALANCE: $" + balance;
+    }
+
+    public boolean authenticate(String password) {
+        return this.password.equals(password);
+    }
+
+    public boolean transferTo(BankAccount other, double amount, String password) {
+        if (authenticate(password) && this.withdraw(amount) && other.deposit(amount)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
