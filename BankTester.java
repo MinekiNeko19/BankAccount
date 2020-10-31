@@ -32,9 +32,14 @@ public class BankTester {
         // System.out.println(account1.toString());
 
         // System.out.println(account1.authenticate("hackMe")); // temporarily a public method
+        
+        System.out.println(account1.getBalance());
+        System.out.println(account2.getBalance());
         System.out.println(account2.transferTo(account1, 50, "toad"));
         System.out.println(account2.transferTo(account1, 50, "octopus"));
         System.out.println(account1.transferTo(account2, 50, "toad"));
         System.out.println(account1.transferTo(account2, 50, "hackMe"));
+        System.out.println(account1.getBalance());
+        System.out.println(account2.getBalance());
     }
 }
