@@ -1,6 +1,9 @@
 public class BankTester {
     public static void main(String[] args) {
         BankAccount account1 = new BankAccount(0, "hackMe");
+        BankAccount account2 = new BankAccount(1, "octopus");
+        System.out.println(account1.deposit(1000));
+
         // System.out.println(account1.getBalance());
         // System.out.println(account1.getAccount());
 
@@ -27,5 +30,7 @@ public class BankTester {
         // System.out.println(account1.getBalance());
 
         // System.out.println(account1.toString());
+
+        System.out.println(account1.authenticate("hackMe"));
     }
 }
